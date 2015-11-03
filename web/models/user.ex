@@ -4,6 +4,8 @@ defmodule HelloPhoenix.User do
   import Comeonin.Bcrypt, only: [hashpwsalt: 1]
 
   schema "users" do
+    has_many :posts, HelloPhoenix.Post
+
     field :username, :string
     field :email, :string
     field :password_digest, :string

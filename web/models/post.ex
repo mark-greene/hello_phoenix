@@ -2,6 +2,8 @@ defmodule HelloPhoenix.Post do
   use HelloPhoenix.Web, :model
 
   schema "posts" do
+    belongs_to :user, HelloPhoenix.User
+    
     field :title, :string
     field :body, :string
 
